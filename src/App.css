@@ -1,0 +1,107 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b2273;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fec003;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd147;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(254, 192, 3, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #fec003;
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background: linear-gradient(135deg, #0b2273 0%, #1a3a8f 100%);
+}
+
+/* Prevent text selection on interactive elements */
+button,
+a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+/* Form element focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 2px rgba(254, 192, 3, 0.2);
+}
+
+/* Mobile touch improvements */
+@media (hover: none) {
+  .card-service:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .body-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card-service {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 640px) {
+  .heading-xl {
+    font-size: 1.875rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .heading-lg {
+    font-size: 1.5rem !important;
+    line-height: 1.15 !important;
+  }
+}
